@@ -9,3 +9,13 @@ spire_yid_speci_map.txt
 y_data/
 __pycache__
 *.pyc
+pg3_spire_speci_map.txt
+pg3_spire_speci_map.txt.sorted
+pg3_spire_speci_map.txt.sorted.no_singleton_specis
+SP080_members_no_count_minid.tsv
+SP090_members_no_count_minid.tsv
+SP095_members_no_count_minid.tsv
+SP100_members_by_speci.tsv
+SP100_members_by_speci.tsv.no_singleton_specis
+SP100_members_no_count_minid.tsv
+SP100_members_no_count.tsv
