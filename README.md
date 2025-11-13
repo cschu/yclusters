@@ -66,3 +66,18 @@ join -1 1 -2 2 -o 2.1,2.2 <(cut -f 2 pg3_spire_speci_map.txt | sort -k1,1 | uniq
   ```
   ls sp100_speci/* | xargs -I{} sh -c 'echo {}; python scripts/index_cluster_file.py {}'  
   ```
+
+  and count the genomes in the cluster
+
+  ```
+  ls sp100_speci/*.txt | xargs -I {} sh -c 'echo {}; python scripts/count_genomes.py {}' 
+  ```
+
+  This will generate a sp100_speci/<speci>.txt.genomes containing all genomes in the cluster. The first line is `<total_genomes> <pg3_genomes> <spire_bins>`,
+
+
+#### 3. Compute SP0XX cluster pangenome information
+
+1. run `scripts/compute_speci_cluster.py`
+
+
