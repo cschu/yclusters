@@ -1,3 +1,6 @@
+Y-cluster
+=========
+
 1. Obtain all available specI annotations for PG3 genomes and SPIRE bins:
 - get_speci_for_bin_spire.py and get_speci_for_bin_pg3.py
 - sort outputs by 1st column (genome/bin id)
@@ -21,5 +24,5 @@
 3. Split SP100 clusters by specI
 - initial split, keep all singletons etc., only drop genes without speci and resulting empty clusters
  -> python scripts/split_into_yspeci_clusters.py pg3_spire_speci_map.txt SP100_members_no_count_minid.tsv > SP100_members_by_speci.tsv (about 1 hour 5 minutes)
-- ignoring singleton specis
- -> python scripts/split_into_yspeci_clusters.py pg3_spire_speci_map.txt.sorted.no_singleton_specis SP100_members_no_count_minid.tsv > SP100_members_by_speci.tsv.no_singleton_specis
+- + ignoring singleton specis
+ -> python scripts/split_into_yspeci_clusters.py pg3_spire_speci_map.txt.sorted.no_singleton_specis SP100_members_no_count_minid.tsv > SP100_members_by_speci.tsv.no_singleton_specis (about 1 hour 1 minute)
