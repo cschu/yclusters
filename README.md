@@ -54,3 +54,15 @@ join -1 1 -2 2 -o 2.1,2.2 <(cut -f 2 pg3_spire_speci_map.txt | sort -k1,1 | uniq
   ```
   python scripts/split_into_yspeci_clusters.py pg3_spire_speci_map.txt.sorted.no_singleton_specis SP100_members_no_count_minid.tsv > SP100_members_by_speci.tsv.no_singleton_specis
   ```
+
+- then split into specI cluster files to reduce data to deal with
+
+  ```
+  python scripts/write_sp100_speci_cluster_sets.py SP100_members_by_speci.tsv.no_singleton_specis 
+  ```
+
+  and index the resulting files for random access
+
+  ```
+  ls sp100_speci/* | xargs -I{} sh -c 'echo {}; python scripts/index_cluster_file.py {}'  
+  ```
