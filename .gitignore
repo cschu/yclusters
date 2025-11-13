@@ -7,3 +7,5 @@ spire_genome_speci_map.txt
 spire_genome_yid_map.txt
 spire_yid_speci_map.txt
 y_data/
+__pycache__
+*.pyc
