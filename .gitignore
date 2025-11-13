@@ -1,0 +1,9 @@
+*_done
+pg3_genome_speci_map.txt
+pg3_spire_speci_map.txt
+slurm-*.out
+SP100_members.tsv
+spire_genome_speci_map.txt
+spire_genome_yid_map.txt
+spire_yid_speci_map.txt
+y_data/
