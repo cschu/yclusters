@@ -78,6 +78,11 @@ join -1 1 -2 2 -o 2.1,2.2 <(cut -f 2 pg3_spire_speci_map.txt | sort -k1,1 | uniq
 
 #### 3. Compute SP0XX cluster pangenome information
 
-1. run `scripts/compute_speci_cluster.py`
+1. run `scripts/compute_speci_cluster.py` for the various SP0XX clusterings
+
+  ```
+  mkdir -p sp095/
+  ls sp100_speci/*.txt | tail -n +11 | xargs -I{} sh -c 'echo {}; python scripts/compute_speci_cluster.py {} SP095_members_no_count_minid.tsv > sp095/$(basename {})'
+  ```
 
 
