@@ -85,4 +85,12 @@ join -1 1 -2 2 -o 2.1,2.2 <(cut -f 2 pg3_spire_speci_map.txt | sort -k1,1 | uniq
   ls sp100_speci/*.txt | tail -n +11 | xargs -I{} sh -c 'echo {}; python scripts/compute_speci_cluster.py {} SP095_members_no_count_minid.tsv > sp095/$(basename {})'
   ```
 
+  This generates output files containing all genes of the cluster (one per line), divided by tab-separated `CLUSTER` lines, of the format
+
+  ```
+  CLUSTER sp0xx_cluster_id n_genomes n_total n_genomes_pg3 n_pg3 n_genomes_spire n_spire
+  ```
+
+  I.e., combined PG3/SPIRE core genome calculations can be based of `n_genomes / n_total`, PG3-based on `n_genomes_pg3 / n_pg3`, and SPIRE-based on `n_genomes_spire / n_spire`.
+
 
